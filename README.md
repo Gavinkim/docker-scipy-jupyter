@@ -32,3 +32,9 @@
 ### Ref
 
 - [**jupyter-disable-password**](https://stackoverflow.com/questions/41159797/how-to-disable-password-request-for-a-jupyter-notebook-session)
+
+## Todo
+<pre>
+- create directory
+- notebook mount to directory
+</pre>
