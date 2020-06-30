@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mkdir -p $sudo_user/kongr
+# mkdir -p $sudo_user/kongr
 
 start(){
     echo 'Starting... kongr(jupyter-notebook)'
