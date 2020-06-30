@@ -1,21 +1,30 @@
-version: '2'
+version: '3.8'
 
 services:
-    jupyter:
+    scipy-jupyter:
         build: .
-        container_name: kongr
-        image: jupyter/scipy-notebook
+        container_name: ${CONTAINER_NAME}
+        image: ${IMAGE_SCIPY_NOTEBOOK}
         user: root
         ports:
             - 8888:8888
         environment: 
-            - JNB_USER=kongr
+            - JNB_USER=${JNB_USER}
             - JNB_UID=1004
             - JNB_GID=1004
-            - JNB_GROUP=kongr
+            - JNB_GROUP=${JNB_GROUP}
             - CHOWN_HOME=yes
             - CHOWN_HOME_OPTS=-R
             - GRANT_SUDO=yes
         volumes: 
-            - /Users/gavin/kongr:/Users/gavin/kongr
+            - ./notebook:${KONGR_HOME}
+        # deploy:
+        #     resources:
+        #         limits:
+        #             memory: 6G
+        #         reservations:
+        #             memory: 4G
         restart: always
+        command: bash -c "jupyter notebook --allow-root --NotebookApp.token='' --NotebookApp.password=''"
+        #토큰 입력 방식이 필요할 경우 사용.
+        # command: bash -c "jupyter notebook --allow-root --NotebookApp.token='${TOKEN}' --NotebookApp.password=''"

@@ -3,17 +3,18 @@
 # mkdir -p $sudo_user/kongr
 
 start(){
-    echo 'Starting... kongr(jupyter-notebook)'
+    echo 'Starting... kongr-jupyter'
     docker-compose up -d
-    # echo 'Check your access address'
-    # sleep 5
-    # docker logs `docker ps | grep 'kongr' | awk '{print $1}'`
+    sleep 2
+    echo "access jupyter lab: http://localhost:8888/lab"
+    echo "access jupyter: http://localhost:8888"
+    echo "jupyter token: kongr"
 }
 access(){
-    docker logs `docker ps | grep 'kongr' | awk '{print $1}'`
+    docker logs `docker ps | grep 'kongr-jupyter' | awk '{print $1}'`
 }
 stop(){
-    echo 'Stoping... kongr'
+    echo 'Stoping... kongr-jupyter'
     docker-compose down
 }
 case "$1" in
@@ -21,11 +22,8 @@ case "$1" in
         start
         sleep 5
         ;;
-    access)
-        access
-        sleep 1
-        ;;
     stop)
         stop
+        ;;
 esac
 exit 0
