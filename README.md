@@ -27,5 +27,9 @@
     docker ps | grep 'kongr-jupyter' | awk '{print $1}'
 - 로그 확인 및 접속주소 확인:
     docker logs `docker ps | grep 'kongr-jupyter' | awk '{print $1}'`
-
 ```
+
+### Ref
+<pre>
+- [jupyter-password](https://stackoverflow.com/questions/41159797/how-to-disable-password-request-for-a-jupyter-notebook-session)
+</pre>
