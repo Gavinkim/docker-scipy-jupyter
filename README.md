@@ -30,6 +30,5 @@
 ```
 
 ### Ref
-<pre>
-- [jupyter-password](https://stackoverflow.com/questions/41159797/how-to-disable-password-request-for-a-jupyter-notebook-session)
-</pre>
+
+- [**jupyter-diable-password**](https://stackoverflow.com/questions/41159797/how-to-disable-password-request-for-a-jupyter-notebook-session)
