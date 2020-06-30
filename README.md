@@ -37,6 +37,7 @@
 
 - [**jupyter-disable-password**](https://stackoverflow.com/questions/41159797/how-to-disable-password-request-for-a-jupyter-notebook-session)
 
+- [***scipy-notebook***](https://github.com/Paperspace/jupyter-docker-stacks/blob/master/scipy-notebook/README.md)
 ## Todo
 <pre>
 - create directory
