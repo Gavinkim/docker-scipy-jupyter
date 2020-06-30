@@ -12,10 +12,10 @@
 ### Usage
 
 * start
-> sh jupyter.sh start
+> `sh jupyter.sh start`
 
 * stop
-> sh jupyuter.sh stop
+> `sh jupyuter.sh stop`
 
 ### Base docker command
 ```
@@ -31,4 +31,4 @@
 
 ### Ref
 
-- [**jupyter-diable-password**](https://stackoverflow.com/questions/41159797/how-to-disable-password-request-for-a-jupyter-notebook-session)
+- [**jupyter-disable-password**](https://stackoverflow.com/questions/41159797/how-to-disable-password-request-for-a-jupyter-notebook-session)
