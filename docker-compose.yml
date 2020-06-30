@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+    jupyter:
+        build: .
+        container_name: kongr
+        image: jupyter/scipy-notebook
+        user: root
+        ports:
+            - 8888:8888
+        environment: 
+            - JNB_USER=kongr
+            - JNB_UID=1004
+            - JNB_GID=1004
+            - JNB_GROUP=kongr
+            - CHOWN_HOME=yes
+            - CHOWN_HOME_OPTS=-R
+            - GRANT_SUDO=yes
+        volumes: 
+            - /Users/gavin/kongr:/Users/gavin/kongr
+        restart: always
