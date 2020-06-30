@@ -18,7 +18,7 @@
 > `sh jupyuter.sh stop`
 
 * package install
-> `!pip3 install <package name>
+> `"!pip3 install <package name>"`
 
 
 ### Base docker command
