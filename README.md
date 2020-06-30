@@ -3,6 +3,7 @@
 ### pre-setup
 ```
 - docker-compose 의 volums 변경
+    mkdir -p $sudo_user/kongr
     cd $sudo_user; cd kongr
     pwd
     확인된 결과로  volums 변경
