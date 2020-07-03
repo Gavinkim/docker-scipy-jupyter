@@ -1,14 +1,5 @@
 ## Docker scipy jupyter
 
-### pre-setup
-```
-- .env 의 KONGR_HOME 변경
-    mkdir -p $sudo_user/kongr
-    cd $sudo_user; cd kongr
-    pwd
-    확인된 결과로  KONGR_HOME 변경
-```
-
 ### Usage
 
 * start

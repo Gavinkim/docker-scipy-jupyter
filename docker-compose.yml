@@ -10,21 +10,23 @@ services:
             - 8888:8888
         environment: 
             - JNB_USER=${JNB_USER}
-            - JNB_UID=1004
-            - JNB_GID=1004
+            - JNB_UID=1000
+            - JNB_GID=1000
             - JNB_GROUP=${JNB_GROUP}
             - CHOWN_HOME=yes
             - CHOWN_HOME_OPTS=-R
             - GRANT_SUDO=yes
         volumes: 
-            - ./notebook:${KONGR_HOME}
-        # deploy:
-        #     resources:
-        #         limits:
-        #             memory: 6G
-        #         reservations:
-        #             memory: 4G
+            - work:/work
+        deploy:
+            resources:
+                limits:
+                    memory: 1G
+                reservations:
+                    memory: 2G
         restart: always
         command: bash -c "jupyter notebook --allow-root --NotebookApp.token='' --NotebookApp.password=''"
         #토큰 입력 방식이 필요할 경우 사용.
         # command: bash -c "jupyter notebook --allow-root --NotebookApp.token='${TOKEN}' --NotebookApp.password=''"
+volumes: 
+    work:
